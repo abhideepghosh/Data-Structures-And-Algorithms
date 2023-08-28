@@ -2,7 +2,7 @@
 
 Welcome to the "Data Structures and Algorithms" repository! This repository is created by Abhideep Ghosh to provide a comprehensive resource for learning and understanding various data structures and algorithms commonly used in computer science and programming.
 
-Table of Contents
+## Table of Contents
 
 1. Introduction
 2. Data Structures
