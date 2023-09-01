@@ -60,7 +60,7 @@ Note: Some languages provide arrays with different characteristics, like resizab
 
 Arrays are fundamental data structures that play a crucial role in computer programming due to their efficiency in access and various applications in algorithms and problem-solving.
 
-#Algorithms
+# Algorithms
 
 ## Binary Search
 
