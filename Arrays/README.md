@@ -59,3 +59,32 @@ In modern languages like Python and JavaScript, dynamic arrays automatically res
 Note: Some languages provide arrays with different characteristics, like resizable arrays (ArrayList in Java) and associative arrays (dictionaries/maps in Python/JavaScript), which are implemented as hash tables.
 
 Arrays are fundamental data structures that play a crucial role in computer programming due to their efficiency in access and various applications in algorithms and problem-solving.
+
+#Algorithms
+
+## Binary Search
+
+```
+// Binary Search (Sorted Array)
+// TC: O(logN) SC: O(1)
+
+const binarySearch = (nums, target) => {
+  let start = 0, end = nums.length - 1;
+  while(start <= end) {
+    const mid = Math.floor(start + (end - start) / 2);
+    if(nums[mid] === target) return mid;
+    else if(nums[mid] < target) start = mid + 1;
+    else end = mid - 1;
+  }
+  return -1;
+}
+
+
+const nums = [1,2,3,4,4,10,10,20,30,80, 100, 100, 200, 1000];
+
+console.log(binarySearch(nums, 30));
+console.log(binarySearch(nums, 1000));
+console.log(binarySearch(nums, 1));
+console.log(binarySearch(nums, 60));
+console.log(binarySearch(nums, 80));
+```
