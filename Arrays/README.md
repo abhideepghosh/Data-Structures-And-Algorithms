@@ -88,3 +88,40 @@ console.log(binarySearch(nums, 1));
 console.log(binarySearch(nums, 60));
 console.log(binarySearch(nums, 80));
 ```
+
+## Merge Sort
+
+```
+// Merge Sort
+// TC: O(NlogN) SC: O(N)
+
+const merge = (nums, start, mid, end) => {
+  let indexStart = start;
+  let indexMid = mid + 1;
+  const merged = [];
+  while(indexStart <= mid && indexMid <= end) {
+    if(nums[indexStart] < nums[indexMid]) merged.push(nums[indexStart++]);
+    else merged.push(nums[indexMid++]);
+  }
+  while(indexStart <= mid) merged.push(nums[indexStart++]);
+  while(indexMid <= end) merged.push(nums[indexMid++]);
+  for(let i=0; i<merged.length; i++) {
+    nums[start] = merged[i];
+    start++;
+  }
+}
+
+const mergeSort = (nums, start, end) => {
+  if(start >= end) return;
+  const mid = Math.floor(start + (end - start) / 2);
+  mergeSort(nums, start, mid);
+  mergeSort(nums, mid + 1, end);
+  merge(nums, start, mid, end);
+}
+
+const nums = [10,40, 20, 60, 50, 50, 100, 80, 90, 10];
+
+mergeSort(nums,0, nums.length - 1);
+
+console.log(nums);
+```
